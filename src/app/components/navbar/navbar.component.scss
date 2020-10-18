@@ -1,4 +1,17 @@
 .navbar-brand {
-  font-size: 3rem !important;
-  padding-left: 15%;
+  font-size: 5vh !important;
+  padding-left: 1.5rem;
+}
+
+nav {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  list-style: none;
+  margin-left: 0px; // looks like bootstrap is putting a left margin on your #nav you may want it off.
+}
+nav li {
+  display: inline-block;
+  text-align: center;
 }
