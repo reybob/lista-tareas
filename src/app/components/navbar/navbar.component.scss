@@ -9,9 +9,16 @@ nav {
   text-align: center;
   padding: 0;
   list-style: none;
-  margin-left: 0px; // looks like bootstrap is putting a left margin on your #nav you may want it off.
+  margin-left: 0px;
 }
 nav li {
   display: inline-block;
   text-align: center;
+}
+
+.name{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: beige;
 }

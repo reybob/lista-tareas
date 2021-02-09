@@ -1,3 +1,4 @@
+import { isGeneratedFile } from '@angular/compiler/src/aot/util';
 import { Injectable } from '@angular/core';
 import { Task } from '../models/task';
 
@@ -8,12 +9,13 @@ import { Task } from '../models/task';
 export class DataService {
 
   tasks: Task[];
-
+  name: string;
   constructor() {
     this.tasks = [];
+    this.name = "";
+
   }
-
-
+  
   getTask(): Task[] {
     if (localStorage.getItem('tasks') === null) {
       this.tasks = [];
@@ -21,6 +23,21 @@ export class DataService {
       this.tasks = JSON.parse(localStorage.getItem('tasks'));
     }
     return this.tasks;
+  }
+
+  addName(name: string): void {
+    if (localStorage.getItem('name') === null) {
+      localStorage.setItem('name', name);
+    }
+  }
+
+  getName(): string {
+    if (localStorage.getItem('name') === null) {
+      this.name = "";
+    } else {
+      this.name = localStorage.getItem('name');
+    }
+    return this.name;
   }
 
   addTask(task: Task): void {

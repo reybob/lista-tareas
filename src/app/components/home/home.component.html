@@ -1,0 +1,8 @@
+<div class="btn__box">
+    <div class="input">
+      <input id="name" [(ngModel)]='name' name="message" type="text" />
+      <label for="message"> {{name.length < 1 ? "Nombre" : ""}}</label>
+    </div>
+    <button class="btn" (click)="addName(name)">Añadir</button>
+  </div>
+  

@@ -22,7 +22,8 @@ export class TaskAddComponent implements OnInit {
       this.taskAdded.emit({
         title: this.title,
         description: this.descripcion,
-        hide: true
+        hide: true,
+        color: this.setColorRamdom()
       });
       this.title = '';
       this.descripcion = '';
@@ -34,6 +35,15 @@ export class TaskAddComponent implements OnInit {
         alert('Añade una descripcion');
       }
     }
+  }
+
+  setColorRamdom() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
 
 }

@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card task-component" [ngStyle]="{'background-color':task.color}">
   <div class="card-header">
     <div class="row">
       <div class="col-12 col-md-8">
@@ -10,7 +10,9 @@
             {{ task.hide ? "Mostrar" : "Ocultar" }}
           </a>
           &nbsp;
-          <a (click)="removeTask(task)" class="btn btn-danger"> Eliminar </a>
+          <a (click)="removeTask(task)" class="btn btn-danger">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>

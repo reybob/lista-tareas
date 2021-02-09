@@ -8,6 +8,7 @@ import { TaskAddComponent } from './components/task-add/task-add.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskComponent } from './components/task/task.component';
 import { DataService } from './services/data.service';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DataService } from './services/data.service';
     NavbarComponent,
     TaskAddComponent,
     TaskListComponent,
-    TaskComponent
+    TaskComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

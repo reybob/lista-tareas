@@ -3,15 +3,21 @@ p{
 }
 
 .card {
-  background-color: #3d3d3d !important;
+  background-color:#3d3d3d00 !important;
   color: white;
 }
 .card-header {
   border-bottom: none !important;
+  background-color: transparent !important;
 }
+
 
 .txt-title {
   font-size: 2rem;
+}
+
+.task-component{
+  border-radius: 50px;
 }
 
 @media only screen and(max-width: 500px) {
